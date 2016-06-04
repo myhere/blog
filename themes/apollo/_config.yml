@@ -1,0 +1,27 @@
+menu:
+    Home: /blog/
+    Archive: /blog/archives/
+    # Weibo: http://weibo.com/myhere
+    GitHub: https://github.com/myhere
+    Rss: /blog/atom.xml
+    Theme: https://github.com/pinggod/hexo-theme-apollo
+
+favicon: /favicon.png
+logo: /blog/favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus: 
+duoshuo: 
+
+# Analytics
+# google-analytics:
+ga: 
+
+# Copyright Infomation
+startyear: 2015
+
+# Font CDN
+#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
+#false: use useso fonts api instead of google's, great response speed for chinese visitor
+googlefonts: false

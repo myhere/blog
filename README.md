@@ -5,5 +5,5 @@
 
 
 ```bash
-npm run deploy
+npm run go
 ```

@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://github.zhangl.in/blog/"/>
-  <updated>2016-06-04T14:41:49.000Z</updated>
+  <updated>2016-08-03T12:28:00.000Z</updated>
   <id>http://github.zhangl.in/blog/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>swift 学习笔记一</title>
+    <link href="http://github.zhangl.in/blog/2016/08/03/learn-swift-1/"/>
+    <id>http://github.zhangl.in/blog/2016/08/03/learn-swift-1/</id>
+    <published>2016-08-03T12:28:00.000Z</published>
+    <updated>2016-08-03T12:28:00.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;基础数据类型&quot;&gt;&lt;a href=&quot;#基础数据类型&quot; class=&quot;headerlink&quot; title=&quot;基础数据类型&quot;&gt;&lt;/a&gt;基础数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Int&lt;/li&gt;
+&lt;li&gt;Float&lt;/li&gt;
+&lt;li&gt;Double&lt;/li&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;Boolean&lt;/li&gt;
+&lt;li&gt;Tuple&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; status = (&lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;not found&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; status = (code: &lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;, msg: &lt;span class=&quot;string&quot;&gt;&quot;not found&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(status.code)&lt;/span&gt;, &lt;span class=&quot;subst&quot;&gt;\(status.msg)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Optional&quot;&gt;&lt;a href=&quot;#Optional&quot; class=&quot;headerlink&quot; title=&quot;Optional&quot;&gt;&lt;/a&gt;Optional&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;?&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; msg:&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;? = &lt;span class=&quot;string&quot;&gt;&quot;hello swift&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;unwrapping&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;optional binding&lt;ul&gt;
+&lt;li&gt;used with &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;unwrapping&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;where&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;implicitly unwrapped optionals&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;!&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; msg:&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;! = &lt;span class=&quot;string&quot;&gt;&quot;hello swift!&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;“unwrapped automatically whenever it is used”&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;基础数据类型&quot;&gt;&lt;a href=&quot;#基础数据类型&quot; class=&quot;headerlink&quot; title=&quot;基础数据类型&quot;&gt;&lt;/a&gt;基础数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Int&lt;/li&gt;
+&lt;li&gt;Float&lt;/li&gt;
+&lt;li&gt;Double&lt;/li&gt;
+&lt;li&gt;Stri
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>

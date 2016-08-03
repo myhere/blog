@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> swift 学习笔记一 · zhanglin's blog</title><meta name="description" content="swift 学习笔记一 - zhanglin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/blog/favicon.png"><link rel="stylesheet" href="/blog/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/blog/" class="logo-link"><img src="/blog/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/blog/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/myhere" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li><li class="nav-list-item"><a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" class="nav-list-link">THEME</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">swift 学习笔记一</h1><div class="post-info">2016年8月3日</div><div class="post-content"><h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><ul>
+<li>Int</li>
+<li>Float</li>
+<li>Double</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Tuple<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> status = (<span class="number">404</span>, <span class="string">"not found"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> status = (code: <span class="number">404</span>, msg: <span class="string">"not found"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"<span class="subst">\(status.code)</span>, <span class="subst">\(status.msg)</span>"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h2><ul>
+<li><p><code>?</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg:<span class="type">String</span>? = <span class="string">"hello swift"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>nil</code></li>
+</ul>
+</li>
+<li>unwrapping<ul>
+<li><code>!</code></li>
+</ul>
+</li>
+<li>optional binding<ul>
+<li>used with <code>if</code> and <code>while</code></li>
+<li>unwrapping</li>
+<li><code>where</code></li>
+</ul>
+</li>
+<li><p>implicitly unwrapped optionals</p>
+<ul>
+<li><p><code>!</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg:<span class="type">String</span>! = <span class="string">"hello swift!"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>“unwrapped automatically whenever it is used”</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/blog/2016/06/04/hello-world/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2016 <a href="http://github.zhangl.in/blog">zhanglin</a>, unless otherwise noted.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

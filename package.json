@@ -6,6 +6,7 @@
     "version": "3.2.0"
   },
   "scripts": {
+    "start": "hexo serve",
     "commit": "git commit -am 'update' && git push origin master",
     "deploy": "hexo generate && hexo deploy",
     "go": "npm run commit && npm run deploy"

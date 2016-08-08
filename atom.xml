@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://github.zhangl.in/blog/"/>
-  <updated>2016-08-03T12:28:00.000Z</updated>
+  <updated>2016-08-08T15:18:24.000Z</updated>
   <id>http://github.zhangl.in/blog/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>swift 学习笔记一</title>
-    <link href="http://github.zhangl.in/blog/2016/08/03/learn-swift-1/"/>
-    <id>http://github.zhangl.in/blog/2016/08/03/learn-swift-1/</id>
-    <published>2016-08-03T12:28:00.000Z</published>
-    <updated>2016-08-03T12:28:00.000Z</updated>
+    <link href="http://github.zhangl.in/blog/2016/08/08/learn-swift-1/"/>
+    <id>http://github.zhangl.in/blog/2016/08/08/learn-swift-1/</id>
+    <published>2016-08-08T15:18:24.000Z</published>
+    <updated>2016-08-08T15:18:24.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;基础数据类型&quot;&gt;&lt;a href=&quot;#基础数据类型&quot; class=&quot;headerlink&quot; title=&quot;基础数据类型&quot;&gt;&lt;/a&gt;基础数据类型&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;Int&lt;/li&gt;
@@ -58,6 +58,28 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&quot;Closure&quot;&gt;&lt;a href=&quot;#Closure&quot; class=&quot;headerlink&quot; title=&quot;Closure&quot;&gt;&lt;/a&gt;Closure&lt;/h2&gt;&lt;h3 id=&quot;closure-expression-syntax&quot;&gt;&lt;a href=&quot;#closure-expression-syntax&quot; class=&quot;headerlink&quot; title=&quot;closure expression syntax&quot;&gt;&lt;/a&gt;closure expression syntax&lt;/h3&gt;&lt;p&gt;{(&lt;code&gt;parameters&lt;/code&gt;) -&amp;gt; &lt;code&gt;return type&lt;/code&gt; in&lt;br&gt;    &lt;code&gt;statements&lt;/code&gt;&lt;br&gt;}&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; names = [&lt;span class=&quot;string&quot;&gt;&quot;hello&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;world&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; (a: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, b: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;inferring type from context&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; a, b &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(sortedNames)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Implicit Returns from Single-Expression Closures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; s1, s2 &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s1 &amp;gt; s2 &amp;#125; )&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;shorthand argument names&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; $&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;gt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Operator Functions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(isOrderedBefore: &amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;Trailing Closures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt; &amp;#123; (a, b) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt; &amp;#123;$&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;gt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 </content>
     
     <summary type="html">

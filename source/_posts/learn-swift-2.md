@@ -102,7 +102,7 @@ let day: Week? = Week(rawValue: 7)
 
 ### recursive enumerations
 
-- indicate enumeration case by prefixing `indireact`
+- indicate enumeration case by prefixing `indirect`
 
 
 ```swift

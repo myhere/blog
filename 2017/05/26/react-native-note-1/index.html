@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> react native 学习笔记 · zhanglin's blog</title><meta name="description" content="react native 学习笔记 - zhanglin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/blog/favicon.png"><link rel="stylesheet" href="/blog/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/blog/" class="logo-link"><img src="/blog/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/blog/" target="_self" class="nav-list-link">HOME</a></li><li class="nav-list-item"><a href="/blog/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/myhere" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/blog/atom.xml" target="_self" class="nav-list-link">RSS</a></li><li class="nav-list-item"><a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank" class="nav-list-link">THEME</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">react native 学习笔记</h1><div class="post-info">2017年5月26日</div><div class="post-content"><h2 id="Plan"><a href="#Plan" class="headerlink" title="Plan"></a>Plan</h2><ul>
+<li>首先看完 The Basics 所有章节</li>
+<li>记录下重点内容，以及可能是坑的东东。所谓的坑，大多数是没搞清楚罢了。<ul>
+<li>重点记录章节中标红的部分，注意事项、与 web 差异等</li>
+</ul>
+</li>
+</ul>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ul>
+<li>flex 布局<ul>
+<li>flex 参数值接受一个值，数字类型；与 web 不同。</li>
+<li>flex 元素的父元素必须指定了 flex 属性 或者 同时制定 width &amp; height 属性。</li>
+<li>flex 在 rn 中默认的 flexDirection 是 column；web 中是 row。</li>
+<li>alignItems: stretch 时 cross axis 不能制定固定大小（fiexed demension）</li>
+</ul>
+</li>
+<li>network<ul>
+<li>支持 fetch api</li>
+<li>支持 await/async 语法</li>
+<li>ios 默认开启 ATS(App Transport Security)，即默认屏蔽非 https 的请求。</li>
+<li>支持 xhr，native 侧的 xhr 没有 cors 的限制</li>
+</ul>
+</li>
+</ul>
+</div></article></div></section><footer><div class="paginator"><a href="/blog/2016/08/16/learn-react/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2017 <a href="http://github.zhangl.in/blog">zhanglin</a>, unless otherwise noted.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>

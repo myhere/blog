@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="http://github.zhangl.in/blog/"/>
-  <updated>2016-08-11T15:55:17.000Z</updated>
+  <updated>2017-05-26T05:54:04.000Z</updated>
   <id>http://github.zhangl.in/blog/</id>
   
   <author>
@@ -16,47 +16,123 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>react native 学习笔记</title>
+    <link href="http://github.zhangl.in/blog/2017/05/26/react-native-note-1/"/>
+    <id>http://github.zhangl.in/blog/2017/05/26/react-native-note-1/</id>
+    <published>2017-05-26T05:54:04.000Z</published>
+    <updated>2017-05-26T05:54:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Plan"><a href="#Plan" class="headerlink" title="Plan"></a>Plan</h2><ul>
+<li>首先看完 The Basics 所有章节</li>
+<li>记录下重点内容，以及可能是坑的东东。所谓的坑，大多数是没搞清楚罢了。<ul>
+<li>重点记录章节中标红的部分，注意事项、与 web 差异等</li>
+</ul>
+</li>
+</ul>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><ul>
+<li>flex 布局<ul>
+<li>flex 参数值接受一个值，数字类型；与 web 不同。</li>
+<li>flex 元素的父元素必须指定了 flex 属性 或者 同时制定 width &amp; height 属性。</li>
+<li>flex 在 rn 中默认的 flexDirection 是 column；web 中是 row。</li>
+<li>alignItems: stretch 时 cross axis 不能制定固定大小（fiexed demension）</li>
+</ul>
+</li>
+<li>network<ul>
+<li>支持 fetch api</li>
+<li>支持 await/async 语法</li>
+<li>ios 默认开启 ATS(App Transport Security)，即默认屏蔽非 https 的请求。</li>
+<li>支持 xhr，native 侧的 xhr 没有 cors 的限制</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Plan&quot;&gt;&lt;a href=&quot;#Plan&quot; class=&quot;headerlink&quot; title=&quot;Plan&quot;&gt;&lt;/a&gt;Plan&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;首先看完 The Basics 所有章节&lt;/li&gt;
+&lt;li&gt;记录下重点内容，以及可能是坑的东东。所谓的坑，大多数
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React 源码学习笔记</title>
+    <link href="http://github.zhangl.in/blog/2016/08/16/learn-react/"/>
+    <id>http://github.zhangl.in/blog/2016/08/16/learn-react/</id>
+    <published>2016-08-16T01:27:55.000Z</published>
+    <updated>2016-08-16T01:27:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>ReactDOM.render<ul>
+<li>ReactMount.render<ul>
+<li>ReactMount._renderSubtreeIntoContainer(null, nextElement, container, callback)<ul>
+<li>ReactElement(TopLevelWrapper, null, null, null, null, null, nextElement)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;ReactDOM.render&lt;ul&gt;
+&lt;li&gt;ReactMount.render&lt;ul&gt;
+&lt;li&gt;ReactMount._renderSubtreeIntoContainer(null, nextElement, container, callback)&lt;ul
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>swift 学习笔记二</title>
     <link href="http://github.zhangl.in/blog/2016/08/11/learn-swift-2/"/>
     <id>http://github.zhangl.in/blog/2016/08/11/learn-swift-2/</id>
     <published>2016-08-11T15:55:17.000Z</published>
     <updated>2016-08-11T15:55:17.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;enum&quot;&gt;&lt;a href=&quot;#enum&quot; class=&quot;headerlink&quot; title=&quot;enum&quot;&gt;&lt;/a&gt;enum&lt;/h2&gt;&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;普通枚举类型&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;CompassPoint&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; north&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; east&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; south&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; west&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;associated-values&quot;&gt;&lt;a href=&quot;#associated-values&quot; class=&quot;headerlink&quot; title=&quot;associated values&quot;&gt;&lt;/a&gt;associated values&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;有点像 c 中的 union，每个 case 可以存储数据&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;定义-1&quot;&gt;&lt;a href=&quot;#定义-1&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Operand&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Unary&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Binary&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, (&lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; plus = &lt;span class=&quot;type&quot;&gt;Operand&lt;/span&gt;.&lt;span class=&quot;type&quot;&gt;Binary&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;+&quot;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  a, b &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a + b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;获取-associated-value&quot;&gt;&lt;a href=&quot;#获取-associated-value&quot; class=&quot;headerlink&quot; title=&quot;获取 associated value&quot;&gt;&lt;/a&gt;获取 associated value&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Operand&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Unary&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Binary&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, (&lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; plus = &lt;span class=&quot;type&quot;&gt;Operand&lt;/span&gt;.&lt;span class=&quot;type&quot;&gt;Binary&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;+&quot;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    a, b &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a + b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; plus &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; .&lt;span class=&quot;type&quot;&gt;Unary&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; operand, &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; fn):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(operand)&lt;/span&gt;: &lt;span class=&quot;subst&quot;&gt;\(fn)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; .&lt;span class=&quot;type&quot;&gt;Binary&lt;/span&gt;(operand, fn):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(operand)&lt;/span&gt;: &lt;span class=&quot;subst&quot;&gt;\(fn)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;raw-values&quot;&gt;&lt;a href=&quot;#raw-values&quot; class=&quot;headerlink&quot; title=&quot;raw values&quot;&gt;&lt;/a&gt;raw values&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;is&lt;ul&gt;
-&lt;li&gt;set to prepopulated values when first define the enumeration&lt;/li&gt;
-&lt;li&gt;all of the same type&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ASCIIControlCharactor&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;Charactor&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; tab = &lt;span class=&quot;string&quot;&gt;&quot;\t&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; lineFeed = &lt;span class=&quot;string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; carriageReturn = &lt;span class=&quot;string&quot;&gt;&quot;\r&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;implicity assigned raw values&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Week&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;Int&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Monday&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Thuesday&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Wednesday&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Thursday&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Friday&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Saturday&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;Sunday&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// case 递增 +1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;CompassPoint&lt;/span&gt;: &lt;span class=&quot;title&quot;&gt;String&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; north, east, south, west&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// value 为 case name&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;access raw value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;type&quot;&gt;CompassPoint&lt;/span&gt;.north.rawValue)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;initializing from a raw value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; day: &lt;span class=&quot;type&quot;&gt;Week&lt;/span&gt;? = &lt;span class=&quot;type&quot;&gt;Week&lt;/span&gt;(rawValue: &lt;span class=&quot;number&quot;&gt;7&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;recursive-enumerations&quot;&gt;&lt;a href=&quot;#recursive-enumerations&quot; class=&quot;headerlink&quot; title=&quot;recursive enumerations&quot;&gt;&lt;/a&gt;recursive enumerations&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;indicate enumeration case by prefixing &lt;code&gt;indirect&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ArithmeticExpression&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; number(&lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;indirect&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; addition(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;indirect&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; mulitiplication(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// or&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;indirect&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ArithmeticExpression&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; number(&lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; addition(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; mulitiplication(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;indirect&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ArithmeticExpression&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; number(&lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; mulitiplication(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; addition(&lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;, &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// (5 + 4) * 2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; five = &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;.number(&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; four = &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;.number(&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; add = &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;.addition(five, four)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; two = &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;.number(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; multi = &lt;span class=&quot;type&quot;&gt;ArithmeticExpression&lt;/span&gt;.mulitiplication(add, two)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;calculate&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;number&quot;&gt;_&lt;/span&gt; expression: ArithmeticExpression)&lt;/span&gt;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; expression &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; .number(num):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; num&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; .addition(a, b):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; calculate(a) + calculate(b)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; .mulitiplication(a, b):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; calculate(a) * calculate(b)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(calculate(multi))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
+    <content type="html"><![CDATA[<h2 id="enum"><a href="#enum" class="headerlink" title="enum"></a>enum</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><blockquote>
+<p>普通枚举类型</p>
+</blockquote>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">CompassPoint</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> north</span><br><span class="line">  <span class="keyword">case</span> east</span><br><span class="line">  <span class="keyword">case</span> south</span><br><span class="line">  <span class="keyword">case</span> west</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="associated-values"><a href="#associated-values" class="headerlink" title="associated values"></a>associated values</h3><blockquote>
+<p>有点像 c 中的 union，每个 case 可以存储数据</p>
+</blockquote>
+<h4 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Operand</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">Unary</span>(<span class="type">String</span>, <span class="type">Double</span> -&gt; <span class="type">Double</span>)</span><br><span class="line">  <span class="keyword">case</span> <span class="type">Binary</span>(<span class="type">String</span>, (<span class="type">Double</span>, <span class="type">Double</span>) -&gt; <span class="type">Double</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> plus = <span class="type">Operand</span>.<span class="type">Binary</span>(<span class="string">"+"</span>) &#123;</span><br><span class="line">  a, b <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="获取-associated-value"><a href="#获取-associated-value" class="headerlink" title="获取 associated value"></a>获取 associated value</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Operand</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Unary</span>(<span class="type">String</span>, <span class="type">Double</span> -&gt; <span class="type">Double</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Binary</span>(<span class="type">String</span>, (<span class="type">Double</span>, <span class="type">Double</span>) -&gt; <span class="type">Double</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> plus = <span class="type">Operand</span>.<span class="type">Binary</span>(<span class="string">"+"</span>) &#123;</span><br><span class="line">    a, b <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> plus &#123;</span><br><span class="line">    <span class="keyword">case</span> .<span class="type">Unary</span>(<span class="keyword">let</span> operand, <span class="keyword">let</span> fn):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"<span class="subst">\(operand)</span>: <span class="subst">\(fn)</span>"</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">let</span> .<span class="type">Binary</span>(operand, fn):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">"<span class="subst">\(operand)</span>: <span class="subst">\(fn)</span>"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="raw-values"><a href="#raw-values" class="headerlink" title="raw values"></a>raw values</h4><ul>
+<li>is<ul>
+<li>set to prepopulated values when first define the enumeration</li>
+<li>all of the same type</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">ASCIIControlCharactor</span>: <span class="title">Charactor</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> tab = <span class="string">"\t"</span></span><br><span class="line">  <span class="keyword">case</span> lineFeed = <span class="string">"\n"</span></span><br><span class="line">  <span class="keyword">case</span> carriageReturn = <span class="string">"\r"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>implicity assigned raw values</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">Week</span>: <span class="title">Int</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="type">Monday</span> = <span class="number">1</span>, <span class="type">Thuesday</span>, <span class="type">Wednesday</span>, <span class="type">Thursday</span>, <span class="type">Friday</span>, <span class="type">Saturday</span>, <span class="type">Sunday</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// case 递增 +1</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">CompassPoint</span>: <span class="title">String</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> north, east, south, west</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// value 为 case name</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>access raw value</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="type">CompassPoint</span>.north.rawValue)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>initializing from a raw value</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> day: <span class="type">Week</span>? = <span class="type">Week</span>(rawValue: <span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="recursive-enumerations"><a href="#recursive-enumerations" class="headerlink" title="recursive enumerations"></a>recursive enumerations</h3><ul>
+<li>indicate enumeration case by prefixing <code>indirect</code></li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">ArithmeticExpression</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> number(<span class="type">Int</span>)</span><br><span class="line">  <span class="keyword">indirect</span> <span class="keyword">case</span> addition(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">  <span class="keyword">indirect</span> <span class="keyword">case</span> mulitiplication(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// or</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">indirect</span> <span class="class"><span class="keyword">enum</span> <span class="title">ArithmeticExpression</span> </span>&#123;</span><br><span class="line">  <span class="keyword">case</span> number(<span class="type">Int</span>)</span><br><span class="line">  <span class="keyword">case</span> addition(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">  <span class="keyword">case</span> mulitiplication(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">indirect</span> <span class="class"><span class="keyword">enum</span> <span class="title">ArithmeticExpression</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> number(<span class="type">Int</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> mulitiplication(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">    <span class="keyword">case</span> addition(<span class="type">ArithmeticExpression</span>, <span class="type">ArithmeticExpression</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// (5 + 4) * 2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> five = <span class="type">ArithmeticExpression</span>.number(<span class="number">5</span>)</span><br><span class="line"><span class="keyword">let</span> four = <span class="type">ArithmeticExpression</span>.number(<span class="number">4</span>)</span><br><span class="line"><span class="keyword">let</span> add = <span class="type">ArithmeticExpression</span>.addition(five, four)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> two = <span class="type">ArithmeticExpression</span>.number(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">let</span> multi = <span class="type">ArithmeticExpression</span>.mulitiplication(add, two)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">calculate</span><span class="params">(<span class="number">_</span> expression: ArithmeticExpression)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> expression &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">let</span> .number(num):</span><br><span class="line">        <span class="keyword">return</span> num</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">let</span> .addition(a, b):</span><br><span class="line">        <span class="keyword">return</span> calculate(a) + calculate(b)</span><br><span class="line">    <span class="keyword">case</span> <span class="keyword">let</span> .mulitiplication(a, b):</span><br><span class="line">        <span class="keyword">return</span> calculate(a) * calculate(b)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(calculate(multi))</span><br></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -74,65 +150,65 @@
     <published>2016-08-08T15:18:24.000Z</published>
     <updated>2016-08-08T15:18:24.000Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;基础数据类型&quot;&gt;&lt;a href=&quot;#基础数据类型&quot; class=&quot;headerlink&quot; title=&quot;基础数据类型&quot;&gt;&lt;/a&gt;基础数据类型&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Int&lt;/li&gt;
-&lt;li&gt;Float&lt;/li&gt;
-&lt;li&gt;Double&lt;/li&gt;
-&lt;li&gt;String&lt;/li&gt;
-&lt;li&gt;Boolean&lt;/li&gt;
-&lt;li&gt;Tuple&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; status = (&lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;not found&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; status = (code: &lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;, msg: &lt;span class=&quot;string&quot;&gt;&quot;not found&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(status.code)&lt;/span&gt;, &lt;span class=&quot;subst&quot;&gt;\(status.msg)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Optional&quot;&gt;&lt;a href=&quot;#Optional&quot; class=&quot;headerlink&quot; title=&quot;Optional&quot;&gt;&lt;/a&gt;Optional&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;?&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; msg:&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;? = &lt;span class=&quot;string&quot;&gt;&quot;hello swift&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;nil&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;unwrapping&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;!&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;optional binding&lt;ul&gt;
-&lt;li&gt;used with &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;while&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;unwrapping&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;where&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;implicitly unwrapped optionals&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;!&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; msg:&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;! = &lt;span class=&quot;string&quot;&gt;&quot;hello swift!&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;“unwrapped automatically whenever it is used”&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Closure&quot;&gt;&lt;a href=&quot;#Closure&quot; class=&quot;headerlink&quot; title=&quot;Closure&quot;&gt;&lt;/a&gt;Closure&lt;/h2&gt;&lt;h3 id=&quot;closure-expression-syntax&quot;&gt;&lt;a href=&quot;#closure-expression-syntax&quot; class=&quot;headerlink&quot; title=&quot;closure expression syntax&quot;&gt;&lt;/a&gt;closure expression syntax&lt;/h3&gt;&lt;p&gt;{(&lt;code&gt;parameters&lt;/code&gt;) -&amp;gt; &lt;code&gt;return type&lt;/code&gt; in&lt;br&gt;    &lt;code&gt;statements&lt;/code&gt;&lt;br&gt;}&lt;/p&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; names = [&lt;span class=&quot;string&quot;&gt;&quot;hello&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;world&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; (a: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;, b: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;inferring type from context&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; a, b &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(sortedNames)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;Implicit Returns from Single-Expression Closures&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; s1, s2 &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; s1 &amp;gt; s2 &amp;#125; )&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;shorthand argument names&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123; $&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;gt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;Operator Functions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(isOrderedBefore: &amp;gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;Trailing Closures&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt; &amp;#123; (a, b) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; a &amp;gt; b&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; sortedNames = names.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt; &amp;#123;$&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;gt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
+    <content type="html"><![CDATA[<h2 id="基础数据类型"><a href="#基础数据类型" class="headerlink" title="基础数据类型"></a>基础数据类型</h2><ul>
+<li>Int</li>
+<li>Float</li>
+<li>Double</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Tuple<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> status = (<span class="number">404</span>, <span class="string">"not found"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> status = (code: <span class="number">404</span>, msg: <span class="string">"not found"</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"<span class="subst">\(status.code)</span>, <span class="subst">\(status.msg)</span>"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h2><ul>
+<li><p><code>?</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg:<span class="type">String</span>? = <span class="string">"hello swift"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>nil</code></li>
+</ul>
+</li>
+<li>unwrapping<ul>
+<li><code>!</code></li>
+</ul>
+</li>
+<li>optional binding<ul>
+<li>used with <code>if</code> and <code>while</code></li>
+<li>unwrapping</li>
+<li><code>where</code></li>
+</ul>
+</li>
+<li><p>implicitly unwrapped optionals</p>
+<ul>
+<li><p><code>!</code></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> msg:<span class="type">String</span>! = <span class="string">"hello swift!"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>“unwrapped automatically whenever it is used”</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Closure"><a href="#Closure" class="headerlink" title="Closure"></a>Closure</h2><h3 id="closure-expression-syntax"><a href="#closure-expression-syntax" class="headerlink" title="closure expression syntax"></a>closure expression syntax</h3><p>{(<code>parameters</code>) -&gt; <code>return type</code> in<br>    <code>statements</code><br>}</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">"hello"</span>, <span class="string">"world"</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span>(&#123; (a: <span class="type">String</span>, b: <span class="type">String</span>) -&gt; <span class="type">Bool</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a &gt; b</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>inferring type from context</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span>(&#123; a, b <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a &gt; b</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(sortedNames)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Implicit Returns from Single-Expression Closures</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span>(&#123; s1, s2 <span class="keyword">in</span> s1 &gt; s2 &#125; )</span><br></pre></td></tr></table></figure>
+<ul>
+<li>shorthand argument names</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span>(&#123; $<span class="number">0</span> &gt; $<span class="number">1</span>&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Operator Functions</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span>(isOrderedBefore: &gt;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Trailing Closures</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span> &#123; (a, b) -&gt; <span class="type">Bool</span> <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">return</span> a &gt; b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sortedNames = names.<span class="built_in">sort</span> &#123;$<span class="number">0</span> &gt; $<span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -154,10 +230,10 @@
     <published>2016-06-04T14:41:49.000Z</published>
     <updated>2016-06-04T14:41:49.000Z</updated>
     
-    <content type="html">&lt;p&gt;重新开始写博客啦，希望能坚持下去。&lt;/p&gt;
-&lt;p&gt;这里会记录些学习笔记、思考总结，或许还有人生感悟&lt;/p&gt;
-&lt;p&gt;感谢 &lt;a href=&quot;http://pinggod.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://pinggod.com/&lt;/a&gt; 的皮肤&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p>重新开始写博客啦，希望能坚持下去。</p>
+<p>这里会记录些学习笔记、思考总结，或许还有人生感悟</p>
+<p>感谢 <a href="http://pinggod.com/" target="_blank" rel="external">http://pinggod.com/</a> 的皮肤</p>
+]]></content>
     
     <summary type="html">
     
